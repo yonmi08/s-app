@@ -10,7 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200303030024) do
+ActiveRecord::Schema.define(version: 20200317111046) do
+
+  create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "breakfast"
+    t.integer  "lunch"
+    t.integer  "dinner"
+    t.integer  "snack"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "graphs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "managements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "5"
+    t.integer  "6"
+    t.integer  "7"
+    t.integer  "8"
+    t.integer  "9"
+    t.integer  "10"
+    t.integer  "11"
+    t.integer  "12"
+    t.integer  "13"
+    t.integer  "14"
+    t.integer  "15"
+    t.integer  "16"
+    t.integer  "17"
+    t.integer  "18"
+    t.integer  "19"
+    t.integer  "20"
+    t.integer  "21"
+    t.integer  "22"
+    t.integer  "23"
+    t.integer  "0"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "nickname",                            null: false

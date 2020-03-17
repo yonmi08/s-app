@@ -1,0 +1,22 @@
+@mixin display {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@mixin set {
+  // background-color: powderblue;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 18px;
+
+  // color: red;
+}
+
+
+@mixin food {
+  width: 200px;
+  height: 80px;
+}
+

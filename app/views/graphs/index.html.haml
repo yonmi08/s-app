@@ -1,0 +1,66 @@
+#graoh-index.index
+
+= render partial: 'layouts/header'
+
+-# .GraphIndexHeader
+
+-#   .GraphIndexHeader__mypage
+-#     mypage
+-#   .GraphIndexHeader__index
+-#     Graph
+
+-#   .GraphIndexHeader__edits
+-#     .GraphIndexHeader__edits__nickname
+-#       nickname
+-#     .GraphIndexHeader__edits__edit
+-#       = icon('fas', 'pastafarianism')
+
+-# = link_to(root_path(current_user.id)) do
+-#   %p= icon('fab', 'optin-monster', class: "monster-2")
+
+
+.GraphIndexMain
+
+  .GraphIndexMain__header
+    .GraphIndexMain__header__daily
+      .GraphIndexMain__header__daily__month
+        3月
+      .GraphIndexMain__header__daily__day
+        3日
+      .GraphIndexMain__header__daily__average
+        15pt.
+
+    .GraphIndexMain__header__weeks
+      .GraphIndexMain__header__weeks__before
+        ◁ 前週
+      .GraphIndexMain__header__weeks__after
+        次週 ▷
+
+
+
+  .GraphIndexMain__graphs
+    __graphs
+
+
+
+  .GraphIndexMain__points
+    .GraphIndexMain__points__breakfast
+      .GraphIndexMain__points__breakfast__food
+        breakfast
+      .GraphIndexMain__points__breakfast__points
+        10pt.
+    .GraphIndexMain__points__lunch
+      .GraphIndexMain__points__lunch__food
+        lunch
+      .GraphIndexMain__points__lunch__points
+        15pt.
+    .GraphIndexMain__points__dinner
+      .GraphIndexMain__points__dinner__food
+        dinner
+      .GraphIndexMain__points__dinner__points
+        20pt.
+    .GraphIndexMain__points__snack
+      .GraphIndexMain__points__snack__food
+        snack
+      .GraphIndexMain__points__snack__points
+        11pt.
