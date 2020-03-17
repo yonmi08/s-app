@@ -1,0 +1,124 @@
+.graph-new {
+  width: 100%;
+  // height: 130vh;
+}
+
+
+
+.GraphCreateHeader {
+  // background-color: palevioletred;
+  width: 1200px;
+  height: 45px;
+  margin: 0 auto;
+  // border: 1px solid #fff;
+  display: flex;
+  margin-top: 30px;
+
+
+    &__month {
+      @include set;
+    }
+
+    &__day {
+      // background-color: powderblue;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      font-size: 18px;
+    }
+}
+
+
+.GraphCreateMain {
+  // background-color: slateblue;
+  width: 1200px;
+  margin: 0 auto;
+  @include display;
+
+  .GraphCreateMainLeft {
+    width: 600px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: scroll;
+
+    &__time {
+      height: 50px;
+      margin: 0 auto;
+      display: flex;
+
+      &__times {
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+      }
+
+      &__points {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    }
+  }
+
+
+
+
+  .GraphCreateMainRight {
+    width: 600px;
+    height: 700px;
+
+    &__food {
+      display: flex;
+      font-size: 20px;
+
+
+      &__breakfast {
+        @include food;
+
+      }
+
+      &__lunch {
+        @include food;
+      }
+
+      &__dinner {
+        @include food;
+      }
+
+      &__snack {
+        @include food;
+      }
+
+      &__points {
+        @include food;
+      }
+    }
+
+    &__point {
+      width: 600px;
+      height: 300px;
+      margin-top: 20px;
+      border: 1px solid #fff;
+
+    }
+  }
+}
+
+
+
+.GraphCreateForm {
+  height: 130px;
+  width: 1200px;
+  margin: 0 auto;
+
+  &__send {
+    height: 70px;
+    width: 300px;
+    line-height: 70px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1px solid #fff;
+  }
+}

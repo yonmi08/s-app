@@ -1,0 +1,183 @@
+.graph-index {
+  width: 100%;
+  // height: 130vh;
+}
+
+.GraphIndexHeader {
+  // background-color: palevioletred;
+  width: 100%;
+  height: 80px;
+  @include display;
+  font-size: 28px;
+  border-bottom: 2px solid #fff;
+
+
+  &__mypage {
+    // background-color: powderblue;
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+
+  &__index {
+    // background-color: salmon;
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+
+  &__edits {
+    display: flex;
+    &__nickname {
+      // background-color: skyblue;
+      width: 100px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    &__edit {
+      // background-color: palevioletred;
+      width: 100px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+}
+
+//__________________________________________________________________________________________________
+
+
+// ここからグラフ-メイン
+
+.GraphIndexMain {
+  // width: 100%;
+  margin-top: 30px;
+
+  &__graphs {
+    // background-color: royalblue;
+    border: 1px solid #fff;
+    width: 1200px;
+    height: 450px;
+    margin: 0 auto;
+  }
+}
+
+
+.GraphIndexMain__header {
+  // background-color: plum;
+  width: 1200px;
+  height: 45px;
+  margin: 0 auto;
+  // border: 1px solid #fff;
+  @include display;
+
+
+  &__daily {
+    @include display;
+
+
+    &__month {
+      @include set;
+    }
+  
+    &__day {
+      // background-color: powderblue;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      font-size: 18px;
+
+    }
+
+    &__average {
+      @include set;
+      padding-left: 15px;
+    }
+  }
+
+  &__weeks {
+    @include display;
+
+    &__before {
+      @include set;
+    }
+
+    &__after {
+      @include set;
+      padding-left: 15px;
+  
+    }
+  }
+}
+
+.GraphIndexMain__points {
+  // background-color: oldlace;
+  width: 1200px;
+  height: 45px;
+  margin: 0 auto;
+  display: flex;
+
+
+  &__breakfast {
+    @include display;
+    padding-right: 40px;
+
+    &__food {
+      @include set;
+    }
+
+    &__points {
+      @include set;
+      padding-left: 12px;
+    }
+  }
+
+  &__lunch {
+    @include display;
+    padding-right: 40px;
+
+    &__food {
+      @include set;
+    }
+
+    &__points {
+      @include set;
+      padding-left: 12px;
+    }
+  }
+
+
+  &__dinner {
+    @include display;
+    padding-right: 40px;
+
+    &__food {
+      @include set;
+    }
+
+    &__points {
+      @include set;
+      padding-left: 12px;
+    }
+  }
+
+  &__snack {
+    @include display;
+    &__food {
+      @include set;
+    }
+
+    &__points {
+      @include set;
+      padding-left: 12px;
+    }
+  }
+
+}
+
