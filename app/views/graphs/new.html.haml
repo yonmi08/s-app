@@ -1,147 +1,42 @@
 #graoh-new.new
 = render partial: 'layouts/header'
 
+.GraphCreate
+  .GraphCreateHeader
+    .GraphCreateHeader__month
+      = date_select :date, {user_month_number: true}, class: 'diary-date', size: "1x2", default: Date.today
+    -# .GraphCreateHeader__day
+    -#   3日
 
-.GraphCreateHeader
-  .GraphCreateHeader__month
-    3月
-  .GraphCreateHeader__day
-    3日
 
-
-.GraphCreateMain
-
-  .GraphCreateMainLeft
-
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        AM 5:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        AM 6:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        AM 7:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        AM 8:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        AM 9:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        AM 10:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        AM 11:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 12:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 13:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 14:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 15:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 16:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 17:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 18:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 19:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 20:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 21:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 22:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
-    .GraphCreateMainLeft__time
-      .GraphCreateMainLeft__time__times
-        PM 23:00
-      .GraphCreateMainLeft__time__points
-        ☆☆☆☆☆
+  .GraphCreateMain
+    = form_for [@management] do |f|
+      .GraphCreateMainLeft
+        .GraphCreateMainLeft__time
+          .GraphCreateMainLeft__time__times
+            AM 5:00
+          .GraphCreateMainLeft__time__points
+            .star-rating
+              = f.radio_button "5", 1, class: "star-rating"
+              %i
+              = f.radio_button "5", 2, class: "star-rating"
+              %i
+              = f.radio_button "5", 3, class: "star-rating"
+              %i
+              = f.radio_button "5", 4, class: "star-rating"
+              %i
+              = f.radio_button "5", 5, class: "star-rating"
+              %i
+    .GraphCreateMainRight
+      = form_for [@food] do |f|
+        .GraphCreateMainRight__food
+          .GraphCreateMainRight__food__breakfast
+            breakfast :
+          .GraphCreateMainRight__food__points
+            = f.number_field :breakfast, class: "breakfast-btn", min: 0, max: 100
 
 
 
-
-  .GraphCreateMainRight
-
-    .GraphCreateMainRight__food
-      .GraphCreateMainRight__food__breakfast
-        breakfast :
-      .GraphCreateMainRight__food__points
-        10 pt.
-
-    .GraphCreateMainRight__food
-      .GraphCreateMainRight__food__lunch
-        lunch :
-      .GraphCreateMainRight__food__points
-        12 pt.
-
-    .GraphCreateMainRight__food
-      .GraphCreateMainRight__food__dinner
-        dinner :
-      .GraphCreateMainRight__food__points
-        14pt.
-
-    .GraphCreateMainRight__food
-      .GraphCreateMainRight__food__snack
-        snack :
-      .GraphCreateMainRight__food__points
-        10 pt.
-
-    .GraphCreateMainRight__point
-
-
-.GraphCreateForm
-  .GraphCreateForm__send
-    SEND
-    -# = f.submit 'SEND', class: "GraphCreateForm__send-btn"
+        .GraphCreateForm
+          .GraphCreateForm__send
+            = f.submit "SEND", class: ".GraphCreateForm__send-btn"
