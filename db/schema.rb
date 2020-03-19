@@ -22,8 +22,14 @@ ActiveRecord::Schema.define(version: 20200317111046) do
   end
 
   create_table "graphs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "management_id"
+    t.integer  "food_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["food_id"], name: "index_graphs_on_food_id", using: :btree
+    t.index ["management_id"], name: "index_graphs_on_management_id", using: :btree
+    t.index ["user_id"], name: "index_graphs_on_user_id", using: :btree
   end
 
   create_table "managements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -65,4 +71,5 @@ ActiveRecord::Schema.define(version: 20200317111046) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "graphs", "users"
 end
